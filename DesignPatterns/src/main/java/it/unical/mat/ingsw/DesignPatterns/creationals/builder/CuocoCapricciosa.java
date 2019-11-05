@@ -1,11 +1,11 @@
 package it.unical.mat.ingsw.DesignPatterns.creationals.builder;
 
 public class CuocoCapricciosa extends Cuoco {
-	
+
 	@Override
 	public void buildImpasto() {
 		pizza.setImpasto("di farina integrale");
-		
+
 	}
 
 	@Override

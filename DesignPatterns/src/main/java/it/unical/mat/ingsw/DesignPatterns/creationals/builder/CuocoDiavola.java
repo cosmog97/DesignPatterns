@@ -5,7 +5,6 @@ public class CuocoDiavola extends Cuoco {
 	@Override
 	public void buildImpasto() {
 		pizza.setImpasto("di farina 00");
-		
 	}
 
 	@Override
