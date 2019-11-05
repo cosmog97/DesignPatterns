@@ -3,7 +3,7 @@ package it.unical.mat.ingsw.DesignPatterns.creationals.builder;
 public class Pizzeria {
 	private Cuoco cuoco;
 	
-	  public void setPizzaBuilder(Cuoco pb)
+	  public void setCuoco(Cuoco pb)
 	    {
 	        cuoco = pb; 
 	    }
@@ -14,10 +14,10 @@ public class Pizzeria {
 	    
 	    public Pizzeria constructPizza()
 	    {
-	        cuoco.createNewPizzaProduct();
-	        cuoco.buildDough();
-	        cuoco.buildSauce();
-	        cuoco.buildTopping();
+	        cuoco.createPizza();
+	        cuoco.buildImpasto();
+	        cuoco.buildSalsa();
+	        cuoco.buildCondimento();
 	        return this;
 	    }
 }

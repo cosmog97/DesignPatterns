@@ -7,12 +7,12 @@ abstract class Cuoco {
     { 
         return pizza; 
     }
-    public void createNewPizzaProduct()
+    public void createPizza()
     { 
         pizza = new Pizza(); 
     }
     
-    public abstract void buildDough();
-    public abstract void buildSauce();
-    public abstract void buildTopping();
+    public abstract void buildImpasto();
+    public abstract void buildSalsa();
+    public abstract void buildCondimento();
 }
