@@ -9,6 +9,7 @@ public class Spartito {
 		NotaMusicale croma2 = GestoreNoteMusicali.getNota("croma");
 		System.out.println(croma1.hashCode() + " : " + croma2.hashCode());
 		NotaMusicale croma3 = croma2.clone();
+		croma3.setAltezzaPentagramma(2);
 		System.out.println(croma3.hashCode() + " : " + croma2.hashCode());
 	}
 
