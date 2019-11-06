@@ -13,5 +13,4 @@ public class Client {
 		speedKMH1 = carAdapter1.getSpeed();
 		speedKMH2 = carAdapter2.getSpeed();
 	}
-
 }
