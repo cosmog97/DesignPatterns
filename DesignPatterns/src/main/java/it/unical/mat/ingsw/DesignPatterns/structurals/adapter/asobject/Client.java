@@ -6,8 +6,8 @@ public class Client {
 		double speedMPH1, speedKMH1, speedMPH2, speedKMH2;
 		Car bugattiVeyron = new BugattiVeyron();
 		Car fiatPanda = new FiatPanda();
-		CarAdapter carAdapter1 = new MPHtoKMPhAdapter(bugattiVeyron);
-		CarAdapter carAdapter2 = new MPHtoKMPhAdapter(fiatPanda);
+		CarAdapter carAdapter1 = new MPHtoKMHAdapter(bugattiVeyron);
+		CarAdapter carAdapter2 = new MPHtoKMHAdapter(fiatPanda);
 		speedMPH1 = bugattiVeyron.getSpeed();
 		speedMPH2 = fiatPanda.getSpeed();
 		speedKMH1 = carAdapter1.getSpeed();
