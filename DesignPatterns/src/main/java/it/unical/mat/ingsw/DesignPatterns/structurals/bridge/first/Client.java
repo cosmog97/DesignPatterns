@@ -40,10 +40,10 @@ public class Client extends Application {
 				"file:///C:/Users/cosmo/git/DesignPatterns/DesignPatterns/src/main/java/it/unical/mat/ingsw/DesignPatterns/structurals/bridge/first/res/2.png"),
 				350, 250);
 
-		tv = new TV();
-		radio = new Radio();
-		remoteControllerBasic = new BasicRemoteController(radio, root);
-		remoteControllerAdvanced = new AdvancedRemoteController(tv, root);
+		tv = new TV(root);
+		radio = new Radio(root);
+		remoteControllerBasic = new BasicRemoteController(tv, root);
+		remoteControllerAdvanced = new AdvancedRemoteController(radio, root);
 
 		primaryStage.setResizable(false);
 		primaryStage.centerOnScreen();

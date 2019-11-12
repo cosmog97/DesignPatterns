@@ -1,10 +1,7 @@
 package it.unical.mat.ingsw.DesignPatterns.structurals.bridge.first;
 
-import javafx.animation.AnimationTimer;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 
 public class BasicRemoteController implements RemoteController {
 	protected Device device;
@@ -15,21 +12,11 @@ public class BasicRemoteController implements RemoteController {
 	public BasicRemoteController(Device device, Group group) {
 		this.device = device;
 
-		Text devicechannel = new Text();
-		Text devicevolume = new Text();
 		Button volumepiubasic = new Button();
 		Button volumemenobasic = new Button();
 		Button canalepiubasic = new Button();
 		Button canalemenobasic = new Button();
 		Button onoffbasic = new Button();
-
-		devicechannel.setFill(Color.GREENYELLOW);
-		devicechannel.setX(120);
-		devicechannel.setY(162);
-
-		devicevolume.setFill(Color.GREENYELLOW);
-		devicevolume.setX(120);
-		devicevolume.setY(177);
 
 		volumepiubasic.setText("Volume +");
 		volumepiubasic.setLayoutX(112);
@@ -67,23 +54,6 @@ public class BasicRemoteController implements RemoteController {
 		});
 
 		group.getChildren().addAll(volumepiubasic, volumemenobasic, canalepiubasic, canalemenobasic, onoffbasic);
-
-		group.getChildren().addAll(devicechannel, devicevolume);
-
-		new AnimationTimer() {
-			@Override
-			public void handle(long now) {
-				if (getPower()) {
-					devicechannel.setText("CHANNEL : " + Integer.toString(device.getChannel()));
-					devicevolume.setText("VOLUME: " + Integer.toString(device.getVolume()));
-				} else {
-					devicechannel.setText("");
-					devicevolume.setText("");
-				}
-
-			}
-
-		}.start();
 
 	}
 

@@ -1,9 +1,41 @@
 package it.unical.mat.ingsw.DesignPatterns.structurals.bridge.first;
 
+import javafx.animation.AnimationTimer;
+import javafx.scene.Group;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+
 public class TV implements Device {
 	private boolean on = false;
 	private int volume = 30;
 	private int channel = 1;
+
+	public TV(Group group) {
+		Text devicechannel = new Text();
+		Text devicevolume = new Text();
+		devicechannel.setFill(Color.GREENYELLOW);
+		devicechannel.setX(350);
+		devicechannel.setY(135);
+
+		devicevolume.setFill(Color.GREENYELLOW);
+		devicevolume.setX(350);
+		devicevolume.setY(150);
+		group.getChildren().addAll(devicechannel, devicevolume);
+		new AnimationTimer() {
+
+			@Override
+			public void handle(long now) {
+				if (on) {
+					devicechannel.setText("CHANNEL : " + Integer.toString(getChannel()));
+					devicevolume.setText("VOLUME : " + Integer.toString(getVolume()));
+				} else {
+					devicechannel.setText("");
+					devicevolume.setText("");
+				}
+
+			}
+		}.start();
+	}
 
 	@Override
 	public boolean isEnabled() {
