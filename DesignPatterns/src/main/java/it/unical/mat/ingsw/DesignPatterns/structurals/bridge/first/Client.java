@@ -18,13 +18,7 @@ public class Client extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		tv = new TV();
-		radio = new Radio();
-		remoteControllerBasic = new BasicRemoteController(radio);
-		remoteControllerAdvanced = new AdvancedRemoteController(tv);
-
 		Group root = new Group();
-
 		final Scene scene = new Scene(root, 600, 600);
 		Canvas canvas = new Canvas(scene.getWidth(), scene.getHeight());
 		GraphicsContext context = canvas.getGraphicsContext2D();
@@ -46,11 +40,13 @@ public class Client extends Application {
 				"file:///C:/Users/cosmo/git/DesignPatterns/DesignPatterns/src/main/java/it/unical/mat/ingsw/DesignPatterns/structurals/bridge/first/res/2.png"),
 				350, 250);
 
-		RemoteManagement rm = new RemoteManagement(root, tv, radio, remoteControllerBasic, remoteControllerAdvanced);
+		tv = new TV();
+		radio = new Radio();
+		remoteControllerBasic = new BasicRemoteController(radio, root);
+		remoteControllerAdvanced = new AdvancedRemoteController(tv, root);
 
 		primaryStage.setResizable(false);
 		primaryStage.centerOnScreen();
-
 		primaryStage.show();
 		primaryStage.setScene(scene);
 	}

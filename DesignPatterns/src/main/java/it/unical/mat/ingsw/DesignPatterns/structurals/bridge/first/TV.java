@@ -27,12 +27,14 @@ public class TV implements Device {
 
 	@Override
 	public void setVolume(int volume) {
-		if (volume > 100) {
-			this.volume = 100;
-		} else if (volume < 0) {
-			this.volume = 0;
-		} else {
-			this.volume = volume;
+		if (isEnabled()) {
+			if (volume > 100) {
+				this.volume = 100;
+			} else if (volume < 0) {
+				this.volume = 0;
+			} else {
+				this.volume = volume;
+			}
 		}
 	}
 
@@ -43,7 +45,10 @@ public class TV implements Device {
 
 	@Override
 	public void setChannel(int channel) {
-		this.channel = channel;
+		if (isEnabled()) {
+			this.channel = channel;
+		}
+
 	}
 
 }
