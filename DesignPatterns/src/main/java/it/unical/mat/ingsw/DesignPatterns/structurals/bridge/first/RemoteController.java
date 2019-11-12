@@ -14,4 +14,6 @@ public interface RemoteController {
 	int getVolume();
 
 	int getChannel();
+
+	boolean getPower();
 }
