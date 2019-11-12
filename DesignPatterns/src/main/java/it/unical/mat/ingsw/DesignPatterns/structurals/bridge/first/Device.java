@@ -16,5 +16,4 @@ public interface Device {
 
 	void setChannel(int channel);
 
-	void printStatus();
 }
