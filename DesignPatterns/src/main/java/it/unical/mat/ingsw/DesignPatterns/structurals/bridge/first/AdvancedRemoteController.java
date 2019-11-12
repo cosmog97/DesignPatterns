@@ -3,7 +3,7 @@ package it.unical.mat.ingsw.DesignPatterns.structurals.bridge.first;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 
-public class AdvancedRemoteController extends BasicRemoteController implements RemoteController {
+public class AdvancedRemoteController extends BasicRemoteController {
 
 	public AdvancedRemoteController(Device device, Group group) {
 		super.device = device;
