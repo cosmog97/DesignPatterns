@@ -12,8 +12,8 @@ public class Client extends Application {
 
 	private Device tv;
 	private Device radio;
-	private BasicRemoteController remoteControllerBasic;
-	private AdvancedRemoteController remoteControllerAdvanced;
+	private RemoteController remoteControllerBasic;
+	private RemoteController remoteControllerAdvanced;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -42,8 +42,8 @@ public class Client extends Application {
 
 		tv = new TV(root);
 		radio = new Radio(root);
-		remoteControllerBasic = new BasicRemoteController(tv, root);
-		remoteControllerAdvanced = new AdvancedRemoteController(radio, root);
+		remoteControllerBasic = new BasicRemoteController(radio, root);
+		remoteControllerAdvanced = new AdvancedRemoteController(tv, root);
 
 		primaryStage.setResizable(false);
 		primaryStage.centerOnScreen();
