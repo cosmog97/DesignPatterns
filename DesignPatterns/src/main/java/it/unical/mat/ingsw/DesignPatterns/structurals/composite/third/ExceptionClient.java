@@ -1,8 +1,10 @@
 package it.unical.mat.ingsw.DesignPatterns.structurals.composite.third;
 
-public class Client {
+public class ExceptionClient {
 
 	public static void main(String[] args) throws Exception {
+		// oltre throws, si può usare il try/catch
+
 		// Inizializza tre ellissi
 		Oggetto ellisse1 = new Ellisse();
 		Oggetto ellisse2 = new Ellisse();
@@ -24,6 +26,8 @@ public class Client {
 		oggetto2.aggiungi(ellisse4);
 		oggetto2.aggiungi(rettangolo1);
 		oggetto2.aggiungi(rettangolo2);
+
+		ellisse1.aggiungi(ellisse4);
 
 		oggetto.aggiungi(oggetto1);
 		oggetto.aggiungi(oggetto2);
