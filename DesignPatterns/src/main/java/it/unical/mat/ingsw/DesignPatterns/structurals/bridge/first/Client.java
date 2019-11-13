@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 public class Client extends Application {
 
+	// remoteController = astrazione, Device = implementazione
 	private Device tv;
 	private Device radio;
 	private RemoteController remoteControllerBasic;
@@ -42,7 +43,7 @@ public class Client extends Application {
 
 		tv = new TV(root);
 		radio = new Radio(root);
-		remoteControllerBasic = new BasicRemoteController(radio, root);
+		remoteControllerBasic = new BasicRemoteController(tv, root);
 		remoteControllerAdvanced = new AdvancedRemoteController(tv, root);
 
 		primaryStage.setResizable(false);
