@@ -1,4 +1,4 @@
-package it.unical.mat.ingsw.DesignPatterns.structurals.decorator;
+package it.unical.mat.ingsw.DesignPatterns.structurals.decorator.simple;
 
 public class LoggingDecorator implements MyDecorator {
 
