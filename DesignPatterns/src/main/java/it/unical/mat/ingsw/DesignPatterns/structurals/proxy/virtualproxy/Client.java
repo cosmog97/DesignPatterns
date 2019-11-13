@@ -7,11 +7,11 @@ public class Client {
 		Immagine image2 = new ImmagineProxata("HiRes_10MB_Photo2");
 		Immagine image3 = new ImmagineProxata("HiRes_10MB_Photo3");
 
-		image1.disegnaImmagine(); // loading necessary
-		image2.disegnaImmagine(); // loading necessary
-		image1.disegnaImmagine(); // no loading necessary; already done
-		image2.disegnaImmagine(); // no loading necessary; already done
-		image3.disegnaImmagine(); // loading necessary
+		image1.disegnaImmagine(); // caricamento necessario
+		image2.disegnaImmagine(); // caricamento necessario
+		image1.disegnaImmagine(); // caricamento non necessario; già pronta
+		image2.disegnaImmagine(); // caricamento non necessario; già pronta
+		image3.disegnaImmagine(); // caricamento necessario
 
 	}
 
