@@ -3,7 +3,6 @@ package it.unical.mat.ingsw.DesignPatterns.structurals.composite.third;
 public class Client {
 
 	public static void main(String[] args) throws Exception {
-		// Inizializza tre ellissi
 		Oggetto ellisse1 = new Ellisse();
 		Oggetto ellisse2 = new Ellisse();
 		Oggetto ellisse3 = new Ellisse();
@@ -11,24 +10,21 @@ public class Client {
 		Oggetto rettangolo1 = new Rettangolo();
 		Oggetto rettangolo2 = new Rettangolo();
 
-		// Inizializza tre grafici composti
-		Oggetto oggetto = new Contenitore();
-		Oggetto oggetto1 = new Contenitore();
-		Oggetto oggetto2 = new Contenitore();
+		Oggetto contenitoreGenerale = new Contenitore();
+		Oggetto contenitore1 = new Contenitore();
+		Oggetto contenitore2 = new Contenitore();
 
-		// Compone i grafici
-		oggetto1.aggiungi(ellisse1);
-		oggetto1.aggiungi(ellisse2);
-		oggetto1.aggiungi(ellisse3);
+		contenitore1.aggiungi(ellisse1);
+		contenitore1.aggiungi(ellisse2);
+		contenitore1.aggiungi(ellisse3);
 
-		oggetto2.aggiungi(ellisse4);
-		oggetto2.aggiungi(rettangolo1);
-		oggetto2.aggiungi(rettangolo2);
+		contenitore2.aggiungi(ellisse4);
+		contenitore2.aggiungi(rettangolo1);
+		contenitore2.aggiungi(rettangolo2);
 
-		oggetto.aggiungi(oggetto1);
-		oggetto.aggiungi(oggetto2);
+		contenitoreGenerale.aggiungi(contenitore1);
+		contenitoreGenerale.aggiungi(contenitore2);
 
-		// Stampa i grafici completi (quattro volte la stringa "Ellisse").
-		oggetto.stampa();
+		contenitoreGenerale.stampa();
 	}
 }
