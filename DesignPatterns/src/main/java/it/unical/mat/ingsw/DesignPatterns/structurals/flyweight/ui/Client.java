@@ -1,4 +1,4 @@
-package it.unical.mat.ingsw.DesignPatterns.structurals.flyweight.advanced;
+package it.unical.mat.ingsw.DesignPatterns.structurals.flyweight.ui;
 
 import java.awt.Color;
 
