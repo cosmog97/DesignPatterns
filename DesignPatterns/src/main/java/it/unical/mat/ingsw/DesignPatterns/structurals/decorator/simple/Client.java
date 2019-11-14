@@ -8,7 +8,7 @@ public class Client {
 
 		System.out.println("First Component: ");
 		firstComponent.print();
-		System.out.println("");
+		System.out.println("\n\n");
 		System.out.println("Second Component: ");
 		secondComponent.print();
 	}
