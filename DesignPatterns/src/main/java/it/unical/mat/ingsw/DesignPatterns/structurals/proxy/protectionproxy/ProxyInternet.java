@@ -20,7 +20,6 @@ public class ProxyInternet implements Internet {
 		if (bannedSites.contains(serverhost.toLowerCase())) {
 			throw new Exception("Access Denied");
 		}
-
 		internet.connectTo(serverhost);
 	}
 
