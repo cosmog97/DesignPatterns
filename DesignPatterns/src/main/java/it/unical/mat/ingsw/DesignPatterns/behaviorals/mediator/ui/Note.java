@@ -1,4 +1,4 @@
-package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.gui;
+package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.ui;
 
 public class Note {
 	private String name;

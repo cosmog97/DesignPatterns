@@ -1,4 +1,4 @@
-package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.gui;
+package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.ui;
 
 import java.awt.event.ActionEvent;
 
@@ -8,11 +8,11 @@ import javax.swing.JButton;
  * Concrete components don't talk with each other. They have only one
  * communication channel–sending requests to the mediator.
  */
-public class SaveButton extends JButton implements Component {
+public class AddButton extends JButton implements Component {
 	private Mediator mediator;
 
-	public SaveButton() {
-		super("Save");
+	public AddButton() {
+		super("Add");
 	}
 
 	@Override
@@ -22,11 +22,11 @@ public class SaveButton extends JButton implements Component {
 
 	@Override
 	protected void fireActionPerformed(ActionEvent actionEvent) {
-		mediator.saveChanges();
+		mediator.addNewNote(new Note());
 	}
 
 	@Override
 	public String getName() {
-		return "SaveButton";
+		return "AddButton";
 	}
 }
