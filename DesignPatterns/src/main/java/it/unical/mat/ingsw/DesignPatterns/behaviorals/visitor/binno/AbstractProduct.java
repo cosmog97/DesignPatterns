@@ -1,6 +1,6 @@
 package it.unical.mat.ingsw.DesignPatterns.behaviorals.visitor.binno;
 
-public class AbstractProduct implements ProductInterface {
+public abstract class AbstractProduct implements ProductInterface {
 	private double price;
 
 	public AbstractProduct(double price) {
@@ -8,10 +8,7 @@ public class AbstractProduct implements ProductInterface {
 	}
 
 	@Override
-	public void accept(ProductVisitor v) {
-		// TODO Auto-generated method stub
-
-	}
+	public abstract void accept(ProductVisitor v);
 
 	@Override
 	public double getPrice() {
