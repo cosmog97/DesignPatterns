@@ -1,4 +1,4 @@
-package it.unical.mat.ingsw.DesignPatterns.behaviorals.visitor.firstWithBinno;
+package it.unical.mat.ingsw.DesignPatterns.behaviorals.visitor.binno;
 
 public class OrdinaryProduct extends AbstractProduct {
 	public OrdinaryProduct(double price) {
