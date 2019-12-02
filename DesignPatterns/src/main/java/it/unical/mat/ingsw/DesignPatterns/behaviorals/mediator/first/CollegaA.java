@@ -1,11 +1,11 @@
-package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.simple.first;
+package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.first;
 
-public class CollegaB extends Collega {
+public class CollegaA extends Collega {
 
 	private String nickName;
 	private Mediatore mediatore;
 
-	public CollegaB(Mediatore mediatore, String nickName) {
+	public CollegaA(Mediatore mediatore, String nickName) {
 		this.mediatore = mediatore;
 		this.nickName = nickName;
 
@@ -25,6 +25,5 @@ public class CollegaB extends Collega {
 	@Override
 	public void ricevi(String messaggio, String nickNameMittente) {
 		System.out.println(nickNameMittente + " -> " + nickName + ": " + messaggio);
-
 	}
 }

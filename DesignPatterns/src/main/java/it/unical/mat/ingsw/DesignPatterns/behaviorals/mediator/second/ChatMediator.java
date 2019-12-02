@@ -1,4 +1,4 @@
-package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.simple.second;
+package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.second;
 
 public interface ChatMediator {
 

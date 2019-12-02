@@ -1,4 +1,4 @@
-package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.simple.first;
+package it.unical.mat.ingsw.DesignPatterns.behaviorals.mediator.first;
 
 import java.util.ArrayList;
 import java.util.List;
